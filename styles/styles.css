@@ -7,6 +7,7 @@
 *::before {
     margin: 0px;
     padding: 0px;
+    font-family: 'Space Grotesk', sans-serif !important;
 }
 
 body {
@@ -366,10 +367,12 @@ p {
     background-repeat: no-repeat;
     background-position: center;
 }
+
 .career-wrapper .container {
     margin: 0 auto;
     max-width: 65rem;
 }
+
 .career-wrapper .career-content {
     display: flex;
     flex-direction: column;
@@ -1125,7 +1128,7 @@ p.l-text-2 {
     margin-top: 180px;
     background: linear-gradient(180deg, rgba(252, 106, 108, 0.0975) 0%, rgba(252, 106, 108, 0) 100%);
     border-radius: 200px 0px 0px 0px;
-    
+
 }
 
 .who-we-are-title {
@@ -1159,12 +1162,85 @@ p.l-text-2 {
     font-size: 30px;
     line-height: 38px;
     color: #3E0819;
+    padding: 3px;
 }
 
 .who-we-are-para {
     font-family: 'Space Grotesk';
     font-style: normal;
     font-weight: 300;
+    font-size: 20px;
+    line-height: 40px;
+    color: #3E0819;
+}
+
+.why-coding {
+    padding-top: 140px;
+    padding-bottom: 205px;
+    margin-top: 180px;
+    background: linear-gradient(180deg, rgba(252, 106, 108, 0.0975) 0%, rgba(252, 106, 108, 0) 100%);
+    border-radius: 200px 0px 0px 0px;
+}
+
+.why-coding .container {
+    margin: 0 auto;
+    max-width: 65rem;
+}
+
+.why-coding-header {
+    display: flex;
+    position: relative;
+    /* padding-top: px; */
+    padding-bottom: 139px;
+    text-align: center;
+    justify-content: center;
+}
+
+.why-coding-title {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 51px;
+    text-transform: uppercase;
+    color: #3E0819;
+}
+
+.why-coding-img {
+    max-width: 250px;
+    top: -68px;
+    left: 795px;
+    position: absolute;
+}
+
+.why_coding {
+    width: 100%;
+}
+
+.why-coding-items {
+    background: #FFFAE9;
+    border: 0.3px solid #3E0819;
+    border-radius: 30px;
+    padding: 57px;
+    margin-bottom: 65px;
+    justify-items: center;
+    align-items: center;
+}
+
+.w-item {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 38px;
+    color: #3E0819;
+    padding: 3px;
+}
+
+.who-we-are-para {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
     font-size: 20px;
     line-height: 40px;
     color: #3E0819;
