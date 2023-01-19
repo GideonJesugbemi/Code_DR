@@ -223,6 +223,24 @@ p {
     align-items: center;
 }
 
+ul.nav-dropdown li {
+    display: block;
+}
+
+ul li ul.nav-dropdown {
+    width: 16%;
+    background: grey;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+
+ul li:hover ul.nav-dropdown {
+    display: block;
+}
+
+
 .logo-container,
 .footer-logo {
     width: 150px;
@@ -382,12 +400,17 @@ p {
     /* padding-left: 216px; */
 }
 
+
 .wrapper-cont {
     display: flex;
     /* justify-content: space-between; */
-    align-items: stretch;
     gap: 38px;
+    flex-direction: column;
+    padding: 12px 30px;
+
 }
+
+
 
 .career-header {
     color: #432931;
@@ -395,6 +418,7 @@ p {
 
 .career-header h3 {
     margin-block: 0px;
+    padding-left: 30px;
 }
 
 .career-image,
@@ -409,8 +433,7 @@ p {
 } */
 
 .career-img {
-    /* width: 100%; */
-    width: 269px;
+    width: 100%;
 }
 
 .career-path-text {
@@ -522,11 +545,88 @@ p {
     color: #650221;
 }
 
+/* .program-card {
+    display: grid;
+    grid-gap: 17px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    padding: 12px 16px;
+} */
+
 .program-card {
     display: flex;
     gap: 17px;
-    flex-wrap: wrap;
-    justify-content: center;
+    padding: 12px 16px;
+    flex-direction: column;
+}
+
+
+
+@media only screen and (min-width: 640px) {
+    .program-card {
+        display: flex;  
+        gap: 17px;
+        flex-direction: row;
+    }
+
+    .wrapper-cont {
+        display: flex;
+        /* justify-content: space-between; */
+        align-items: stretch;
+        gap: 38px;
+        flex-direction: row;
+    }
+
+    .countdown-content {
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .footer-content {
+        padding-top: 29px;
+        display: flex;
+        gap: 28px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    .footer-shape {
+        max-width: 192.98px;
+    }
+    
+    .footer-shape img {
+        width: 100%;
+    }
+
+    .why-coding .container {
+        margin: 0 auto;
+        max-width: 65rem;
+    }
+
+    .contact-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 66px;
+    padding-bottom: 158px;
+}
+    
 }
 
 .program-card .card-item {
@@ -585,6 +685,8 @@ p {
     padding-top: 29px;
     display: flex;
     gap: 28px;
+    /* flex-direction: column;
+    padding: 12px 75px; */
 }
 
 .footer-content-details {
@@ -592,6 +694,7 @@ p {
     display: flex;
     flex-direction: column;
     gap: 28px;
+    padding: 12px 16px;
 }
 
 .footer-details {
@@ -640,6 +743,7 @@ p {
 
 .footer-shape {
     max-width: 192.98px;
+    /* display: none; */
 }
 
 .footer-shape img {
@@ -735,6 +839,15 @@ p {
     flex-direction: column;
     gap: 18px;
     margin: 25px 0px;
+}
+
+.day-header {
+    color: #3E0819;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px !important;
+    line-height: 18px;
 }
 
 .other-details {
@@ -874,6 +987,22 @@ p.l-text-2 {
     font-weight: 500;
 }
 
+
+/*-----------------*\
+    #REGISTER-PAGE
+\*----------------*/
+
+
+.register-form .container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding-top: 150px;
+    padding-bottom: 90px;
+}
+
+
+
 /*-----------------*\
     #CONTACT-PAGE
 \*----------------*/
@@ -951,9 +1080,11 @@ p.l-text-2 {
 
 .contact-cont {
     display: flex;
+    /* flex-direction: column; */
     gap: 66px;
     padding-bottom: 158px;
 }
+
 
 .ctn-btn {
     padding-top: 30px;
@@ -961,6 +1092,11 @@ p.l-text-2 {
 
 .address {
     padding-top: 135px;
+}
+
+.register-link {
+    color: blue;
+    text-decoration: underline;
 }
 
 .l-heading {
@@ -1051,6 +1187,13 @@ p.l-text-2 {
     gap: 20px;
     flex-direction: column;
 }
+
+/* .program-page {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 50px;
+} */
 
 /* .last-item-text  */
 
@@ -1245,3 +1388,313 @@ p.l-text-2 {
     line-height: 40px;
     color: #3E0819;
 }
+
+
+
+/* NEW STYLE CODE */
+
+.header {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    background-color: #FFF8E3;
+}
+.header.active { padding: 0px; }
+.navbar { width: 100%; }
+.container { width: 90%; }
+.nav-list {
+    padding-block: 50px;
+    transition: 0.5s all ease-in-out;
+}
+.navbar .active { left: 0px;}
+#menu-btn { display: none; }
+button {
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+button img { width: 25px; }
+
+
+.btn-1:hover {
+    padding: 10px 15px;
+}
+
+
+
+.background-image { height: fit-content; }
+
+.hero-heading {
+    max-width: 839px;
+    width: 100%;
+}
+.program-content .program-title h2 { line-height: unset;}
+.program-card .card-item {
+    max-width: 300px;
+    width: 100%;
+}
+.program-card {
+    display: flex;
+    gap: 17px;
+    flex-direction: unset;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.career-image, .career-details {
+    max-width: 50%;
+    width: 100%;
+}
+.career-details { gap: 10px; }
+.brand-text {
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.footer-lists {
+    gap: 10px;
+    /* max-width: fit-content; */
+    gap: 30px;
+}
+.footer-content {
+    padding: 12px 5px;
+}
+.footer-details {
+    width: 100%;
+    gap: 50px;
+}
+
+@media (max-width: 1200px) {
+    .launch-img { display: none; }
+}
+@media (max-width: 1000px) {
+    .logo-container, .footer-logo { width: 130px; }
+    .btn-1 a, .btn-2 a, .btn-3 a { font-size: 16px; }
+    .hero-heading { font-size: 80px; }
+}
+
+
+@media (max-width: 900px) {
+    .nav-list {
+        /* width: 100%; */
+        padding-left: 16px;
+        gap: 30px;
+    }
+    .hero-heading { 
+        font-size: 60px;
+        line-height: unset;
+    }
+    .footer-lists { gap: 80px; }
+    .footer-lists ul { width: fit-content;}
+}
+
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: -1000px;
+    }
+    .nav-list {
+        width: 100%;
+        background-color: #FFF8E3;
+        align-items: flex-start;
+        padding-left: 10%;
+        gap: 50px;
+    }
+    #menu-btn {
+        display: inline-block;
+    }
+    .hero-content { gap: 30px; }
+    .hero-heading { 
+        font-size: 70px;
+        line-height: unset;
+    }
+
+    .hero p { font-size: 18px; }
+    .btn-1:hover a, .btn-2:hover a, .btn-3:hover a { font-size: 14px; }
+
+    .launch-img { display:  none;}
+    .footer-lists ul { width: fit-content;}
+
+}
+@media (max-width: 763px) {
+    .brand-text { max-width: 100%;}
+    .footer-lists { padding-left: 16px; }
+}
+@media (max-width: 730px) {
+    .brand-text { max-width: 100%; }
+}
+@media (max-width: 680px) {
+    .hero-heading { font-size: 50px; }
+    .career-image, .career-details { max-width: 100%;}
+}
+@media (max-width: 580px) {
+    .hero-heading {
+        font-size: 40px;
+    }
+
+    .footer-shape {
+        display: none;
+    }
+}
+@media (max-width: 360px) {
+    .logo-container { width: 100px; }
+    .font-18 { font-size: 16px; }
+
+    .hero {
+        padding-bottom: 21px;
+        padding-top: 150px;
+    }
+    .hero-heading {
+        font-family: 'Space Grotesk';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 41px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    .hero-content p {
+        font-family: 'Space Grotesk';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 11px;
+        line-height: 13px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #FFFADF;
+    }
+    .btn-2 a {
+        font-family: 'Space Grotesk';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 14px;
+        letter-spacing: -0.04em;
+        color: #FFFFFF;
+    }
+    .btn-2:hover a { font-size: 11px; }
+    .btn-2, .btn-2:hover {
+        padding: 6px 14px;
+    }
+    .btn-2:hover img { width: 20px; }
+    .btn-3 a {
+        font-family: 'Space Grotesk';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 26px;
+        color: #FFFFFF;
+    }
+    .btn-3:hover a { font-size: 11px; }
+    .btn-3:hover img { width: 20px; }
+    .stroke-pdd { margin-block: 21px; }
+    .programs {
+        font-family: 'Space Grotesk';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 38px;
+        color: #650221;
+    }
+    .program { padding-bottom: 83px; }
+    .program-card { gap: 40px; }
+    .program-content .program-title h2 {
+        font-size: 26px;
+        line-height: 36px;
+    }
+    .program-card .card-item { width: 250px; }
+    .launch-header {
+        font-family: 'Space Grotesk';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 38px;
+        color: #650221;
+    }
+    .launch-text {
+        font-family: 'Space Grotesk';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 10px;
+        line-height: 13px;
+        color: #3E0819;
+        text-align: left;
+    }
+    .countdown-wrapper { border-radius: 100px 0px 0px 0px; }
+    .countdown-text h2 {
+        font-size: 25px;
+        line-height: 30px;
+        text-indent: 10px;
+    }
+    .flipdown-item .no {padding: 20px 10px;}
+    .career-wrapper .career-content { 
+        gap: 16px;
+        padding-top: 16px;
+        padding-bottom: 49px;
+    }
+    .career-header h3 {
+        font-family: 'Space Grotesk';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 26px;
+        color: #432931;
+        padding-left: 0px;
+    }
+    .career-details h4{
+        font-family: 'Space Grotesk';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 26px;
+        color: #3E0819;
+    }
+    .career-path-text {
+        font-family: 'Space Grotesk';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 20px;
+        color: #3E0819;
+    }
+    .career-period {
+        font-family: 'Space Grotesk';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 26px;
+        color: #FF3D40;
+        padding: 16px 0px;
+    }
+    .wrapper-cont { padding: 0px; }
+    .brand-text { 
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footer-logo { width: 150px; }
+    .footer-lists ul {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .footer-content { padding: 50px 0px 20px; }
+    span {
+        width: 100%;
+        height: 2px;
+        display: inline-block;
+        background-color: #FFFDF3;
+    }
+    .copyright { padding: 28px 20px; }
+
+    .footer-shape {
+        display: none;
+    }
+}   
